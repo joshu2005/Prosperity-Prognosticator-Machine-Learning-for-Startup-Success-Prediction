@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Startup Success</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Startup Details</h2>
+    <p>Enter the engagement and funding metrics below</p>
+
+    <form action="/predict" method="post">
+
+        <label>Status (0=Closed, 1=Operating, 2=Acquired)</label>
+        <input type="number" name="status" required>
+
+        <label>Number of Relationships</label>
+        <input type="number" name="relationships" required>
+
+        <label>Total Funding (USD)</label>
+        <input type="number" name="funding_total_usd" required>
+
+        <label>Age at Last Milestone (Years)</label>
+        <input type="number" name="age_last_milestone_year" required>
+
+        <label>Number of Milestones</label>
+        <input type="number" name="milestones" required>
+
+        <label>Age at First Milestone (Years)</label>
+        <input type="number" name="age_first_milestone_year" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
